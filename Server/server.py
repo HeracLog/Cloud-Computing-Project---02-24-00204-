@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, abort
+from flask import Flask, request, jsonify, abort, send_from_directory
 import random
 import psycopg2
 from flask_cors import CORS, cross_origin
@@ -40,6 +40,9 @@ def parseAdminHomepage():
             <tr>
                 <td><a href="/student/{student[0]}">{student[1]}</a></td>
                 <td>{student[0]}</td>
+                <td>{student[2]}</td>
+                <td>{student[-2]}</td>
+                <td>{student[-3]}</td>
                 <td>{student[-1]}</td>
             </tr>
             """
@@ -107,10 +110,16 @@ def login(username, password):
                 return parseStudentHomepage(row[1])
     abort(403)
 
+
 @app.route('/')
 def loginPage():
     with open('./templates/index.html','r') as f:
         return f.read()
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.root_path, 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+
 @app.route('/student/<id>')
 def accessStudentData(id):
    return parseStudentHomepage(id)

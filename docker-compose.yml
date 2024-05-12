@@ -1,9 +1,9 @@
 version: '3.8'
 services:
   database:
-    build: ./database server container
+    build: ./Database
   web:
-    build: ./web server container
+    build: ./Server
     ports: 
       - "8080:7000"
     depends_on:
