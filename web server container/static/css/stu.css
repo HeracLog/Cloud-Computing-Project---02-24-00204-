@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.profile {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    background-color: #199fb1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.profile-info {
+    display: flex;
+    
+}
+
+.profile-details {
+    flex: 1;
+    padding: 20px;
+    
+
+}
+
+.profile-details h2 {
+    margin-top: 0;
+}
+
+.profile-details p {
+    margin: 5px 0;
+}
+body {
+    background: #fafafa; /* fallback for old browsers */
+    background: -webkit-linear-gradient(bottom, #199fb1, #a5d1e1);
+    background: -moz-linear-gradient(bottom, #199fb1, #a5d1e1);
+    background: -o-linear-gradient(bottom, #199fb1, #a5d1e1);
+    background: linear-gradient(to top, #199fb1, #a5d1e1);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh; /* Make sure the background covers the entire viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+
+.navbar {
+    background-color: #0d5c75; /* Navbar background color */
+    
+}
+
+.navbar-nav .nav-item {
+    padding: 0 10px; /* Adjusting padding for each nav item */
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF; /* Navbar link text color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #17a2b8; /* Navbar link text color on hover */
+}
+
+.navbar-nav .btn {
+    margin-left: 10px; /* Add margin between buttons */
+}
+
+.navbar-nav .btn:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+.navbar {
+    background-color: #0d5c75; /* Navbar background color */
+    padding: 20px; /* Increase padding */
+    font-size: 18px; /* Increase font size */
+}

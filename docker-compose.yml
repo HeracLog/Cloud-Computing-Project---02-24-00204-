@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  database:
+    build: ./database server container
+  web:
+    build: ./web server container
+    ports: 
+      - "8080:7000"
+    depends_on:
+      - database
+  

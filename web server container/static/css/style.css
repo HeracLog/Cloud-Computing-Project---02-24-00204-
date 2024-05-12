@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form {
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #199fb1;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+  background: #a5d1e1;
+}
+
+body {
+  background: #fafafa; /* fallback for old browsers */
+  background: -webkit-linear-gradient(bottom, #199fb1, #a5d1e1);
+  background: -moz-linear-gradient(bottom, #199fb1, #a5d1e1);
+  background: -o-linear-gradient(bottom, #199fb1, #a5d1e1);
+  background: linear-gradient(to top, #199fb1, #a5d1e1);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh; /* Make sure the background covers the entire viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+.navbar {
+  background-color: #0d5c75; /* Navbar background color */
+  
+}
+
+.navbar-nav .nav-item {
+  padding: 0 10px; /* Adjusting padding for each nav item */
+}
+
+.navbar-nav .nav-link {
+  color: #FFFFFF; /* Navbar link text color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #17a2b8; /* Navbar link text color on hover */
+}
+
+.navbar-nav .btn {
+  margin-left: 10px; /* Add margin between buttons */
+}
+
+.navbar-nav .btn:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+.navbar {
+  background-color: #0d5c75; /* Navbar background color */
+  padding: 20px; /* Increase padding */
+  font-size: 18px; /* Increase font size */
+}
