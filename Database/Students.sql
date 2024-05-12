@@ -9,7 +9,7 @@ CREATE TABLE STUDENTS (
   studentID varchar(16) PRIMARY KEY NOT NULL,
   name varchar(63) NOT NULL,
   age INTEGER NOT NULL,
-  studentLevel INTEGER NOT NULL,
+  studentLevel INTEGER NOT NULL  CONSTRAINT levelrange CHECK (studentLevel >= 1),
   CGPA NUMERIC(3, 2) NOT NULL CONSTRAINT range CHECK (CGPA >= 0 AND CGPA <= 4),
   department varchar(63) NOT NULL
 );

@@ -96,22 +96,6 @@ def parseStudentHomepage(id):
     return pageData.replace(
         'STUDENTDATAGOESHERE',entry)
 
-# Function to reply to student addition to the database
-def replyToStd(success, errorText =''):
-    # If insert operation is successful
-    if success:
-        # We read the file for it and reply with it
-        with open('./templates/succ.html','r') as f:
-            return f.read()
-    # If it is not
-    else:
-        # We read the file for it
-        with open('./templates/succ.html','r') as f:
-            data = f.read()
-        # Then replace the error placeholder and return it
-        return data.replace("ERRORGOESHERE",str(errorText))
-    
-
 # CORS headers
 @app.after_request
 def after_request(response):
@@ -177,12 +161,12 @@ def addStudent(name,id,age,level,dep,cgpa):
         conn.commit()
         # Closes the cursor
         cur.close()
-        # Returns the success page
-        return replyToStd(True)
+        # Returns OK
+        return ""
     # If an exception does occur
     except Exception as e:
         # Return the error page
-        return replyToStd(False, errorText= e)
+        abort(400)
 
 # Adding page route
 @app.route('/add-std')
