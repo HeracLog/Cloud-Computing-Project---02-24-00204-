@@ -30,7 +30,7 @@
     <div id="response"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
-      async function sendRequest() {
+      function sendRequest() {
           const currentDomain = window.location.hostname;
           const currentPort = window.location.port;
           const name = document.getElementById('name').value;
@@ -39,11 +39,22 @@
           const level = document.getElementById('level').value;
           const department = document.getElementById('department').value;
           const cgpa = document.getElementById('cgpa').value;
-          const newLink = `http://${currentDomain}:${currentPort}/add/${name}/${id}/${age}/${level}/${department}/${cgpa}`;
+          const newLink = `http://${currentDomain}:${currentPort}/add/${name}/${id}/${age}/${level}/${department}/${cgpa}#`;
           const replacedString = newLink.replace(" ", '%20').replace(" ", '%20').replace(" ", '%20').replace(" ", '%20').replace(" ", '%20').replace(".","%2E");
-          window.location.href = replacedString;
           console.log(replacedString);
-      }
+          window.location.replace(replacedString);
+          fetch(replacedString)
+            .then(response => {
+                // Check if the response is successful
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+            else{
+                alert("Student added successfully!");
+
+            }
+            });
+        }
     </script>
   
   

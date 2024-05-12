@@ -164,7 +164,7 @@ def accessStudentData(id):
     
 
 # Adding a student route
-@app.route('/add/<name>/<id>/<int:age>/<int:level>/<dep>/<cgpa>')
+@app.route('/add/<name>/<id>/<age>/<level>/<dep>/<cgpa>')
 def addStudent(name,id,age,level,dep,cgpa):
     # Tries to add the student
     try:
