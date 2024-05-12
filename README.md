@@ -29,4 +29,4 @@ To install and run the project, follow these steps:
 ## Usage
 1. **Access the Web Server**: Once the containers are up and running, you can access the web server by visiting `http://localhost:8080` in your web browser.s Web Pages: Navigate to the web server URL (http://localhost:8080) to view the served HTML files. You can interact with the web pages as intended.
 
-2. **Database Interaction**: The database container is set up to handle student information. You can perform CRUD operations on the database using the appropriate APIs or interfaces provided by your chosen database management system (DBMS).
+2. **Database Interaction**: The database container is set up to handle student information. You can perform operations by using the web server as an intermediate between the user and the database.
