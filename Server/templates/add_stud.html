@@ -42,7 +42,6 @@
           const newLink = `http://${currentDomain}:${currentPort}/add/${name}/${id}/${age}/${level}/${department}/${cgpa}#`;
           const replacedString = newLink.replace(" ", '%20').replace(" ", '%20').replace(" ", '%20').replace(" ", '%20').replace(" ", '%20').replace(".","%2E");
           console.log(replacedString);
-          window.location.replace(replacedString);
           fetch(replacedString)
             .then(response => {
                 // Check if the response is successful
