@@ -8,7 +8,8 @@ The project consists of two main components:
 
 1. **Web Server Container**: This container hosts the web server responsible for serving HTML files. It handles incoming requests and responds with the appropriate HTML content. The web server is designed to run efficiently within a containerized environment.
 
-2. **Database Container**: This container houses the database containing student information. It stores data related to students, such as their names, grades, and other relevant details. The database container ensures data persistence and provides a reliable storage solution for the application.
+2. **Database Container**: This container houses the database containing student information. It stores data related to students, such as their names, ages, ids, 
+and departments. . The database container ensures data persistence and provides a reliable storage solution for the application.
 
 ## Installation
 
