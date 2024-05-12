@@ -6,7 +6,7 @@ CREATE TABLE USERS (
   admin BOOLEAN DEFAULT false
 );
 CREATE TABLE STUDENTS (
-  studentID INTEGER PRIMARY KEY NOT NULL,
+  studentID varchar(16) PRIMARY KEY NOT NULL,
   name varchar(63) NOT NULL,
   age INTEGER NOT NULL,
   studentLevel INTEGER NOT NULL,
@@ -22,11 +22,11 @@ INSERT INTO USERS (username, passwordhashed) VALUES ('2202140', 'b6a4ad19f5f316d
 INSERT INTO USERS (username, passwordhashed) VALUES ('22010442', 'f420b60d5c0c9af7670c37d3f4cea7f8a02c3bddbcae910f6855e8844bdaca07');
 UPDATE USERS SET admin = true where username = 'Sara';
 INSERT INTO STUDENTS VALUES 
-  (2203173, 'Ahmed Mohamed Gaber', 19,2,3.18,'Intelligent Systems'),
-  (2203177, 'Moataz Ali Ramadan', 20,2, 3.82,'Intelligent Systems'),
-  (2203175, 'Hazem Ahmed Abdelfatah', 20,2, 3.64,'Intelligent Systems'),
-  (22010442, 'Youssef Salah Mostafa', 19,2, 3.76,'Intelligent Systems'),
-  (2202140, 'Abdelrahman Islam Gad', 20,2, 3.91,'Business Analytics');
+  ('2203173', 'Ahmed Mohamed Gaber', 19,2,3.18,'Intelligent Systems'),
+  ('2203177', 'Moataz Ali Ramadan', 20,2, 3.82,'Intelligent Systems'),
+  ('2203175', 'Hazem Ahmed Abdelfatah', 20,2, 3.64,'Intelligent Systems'),
+  ('22010442', 'Youssef Salah Mostafa', 19,2, 3.76,'Intelligent Systems'),
+  ('2202140', 'Abdelrahman Islam Gad', 20,2, 3.91,'Business Analytics');
   
   
  
