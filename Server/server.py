@@ -154,6 +154,14 @@ def addStudent(name,id,age,level,dep,cgpa):
     try:
         # Creates a cursoe to the database
         cur = conn.cursor()
+        # Fetches entries with the given id to check if user exists
+        cur.execute(f'SELECT * FROM STUDENTS WHERE studentID = \'{id}\';')
+        # Stores the fetched data
+        data = cur.fetchall()
+        # If the entry already exists
+        if data:
+            # Raise an exception
+            raise Exception("Student Already exists")
         # Executes the insert operation
         cur.execute(f"""INSERT INTO STUDENTS VALUES 
     ('{id}', '{name}', {age},{level},{cgpa},'{dep}' );""")
@@ -165,6 +173,7 @@ def addStudent(name,id,age,level,dep,cgpa):
         return ""
     # If an exception does occur
     except Exception as e:
+        print(e)
         # Return the error page
         abort(400)
 
