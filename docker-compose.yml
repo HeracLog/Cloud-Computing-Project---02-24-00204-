@@ -2,6 +2,9 @@ version: '3.8'
 services:
   database:
     build: ./Database
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
   web:
     build: ./Server
     ports: 
@@ -9,3 +12,5 @@ services:
     depends_on:
       - database
   
+volumes:
+  db_data:
